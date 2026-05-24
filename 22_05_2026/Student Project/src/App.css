@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+/* App layout */
 .app {
   min-height: 100vh;
   display: flex;
@@ -14,272 +19,268 @@
   transition: 0.3s;
 }
 
-/* Light mode */
-.light {
-  background: linear-gradient(135deg, #dbeafe, #f8fafc);
-  color: #0f172a;
+.app.light {
+  background-color: #dbeafe;
 }
 
-/* Dark mode */
-.dark {
-  background: linear-gradient(135deg, #020617, #1e293b);
-  color: #f8fafc;
+.app.dark {
+  background-color: #020617;
 }
 
-/* Card chính */
+/* Profile card */
 .profile-card {
-  width: 390px;
+  width: 360px;
   padding: 25px;
-  border-radius: 28px;
+  border-radius: 22px;
 
   background-color: white;
   color: #0f172a;
 
   text-align: center;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 
   transition: 0.3s;
 }
 
-.dark .profile-card {
+.app.dark .profile-card {
   background-color: #0f172a;
   color: white;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
 }
 
-/* Thanh trên cùng */
+/* Top button */
 .top-bar {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 10px;
-}
-
-/* Nút dark/light */
-.theme-btn {
-  padding: 9px 15px;
-  border: none;
-  border-radius: 999px;
-
-  background-color: #0f172a;
-  color: white;
-
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.dark .theme-btn {
-  background-color: white;
-  color: #0f172a;
+  margin-bottom: 15px;
 }
 
 /* Avatar */
-.avatar-wrapper {
-  width: 140px;
-  height: 140px;
+.avatar-box {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 15px;
+}
 
-  position: relative;
-  margin: 10px auto 15px;
+.avatar,
+.avatar-placeholder {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
-
-  border-radius: 50%;
   object-fit: cover;
-
-  border: 6px solid #2563eb;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+  border: 4px solid #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
-.dark .avatar {
+.avatar-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #dbeafe;
+  color: #2563eb;
+  border: 4px solid #2563eb;
+
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.app.dark .avatar {
   border-color: #38bdf8;
 }
 
-/* Chấm online/offline */
-.status-dot {
-  position: absolute;
-  right: 8px;
-  bottom: 12px;
-
-  width: 24px;
-  height: 24px;
-
-  border-radius: 50%;
-  border: 4px solid white;
+.app.dark .avatar-placeholder {
+  background-color: #1e293b;
+  color: #38bdf8;
+  border-color: #38bdf8;
 }
 
-.online-dot {
-  background-color: #22c55e;
-}
-
-.offline-dot {
-  background-color: #ef4444;
-}
-
-/* Tên */
-h1 {
+/* Text */
+.profile-card h1 {
   margin: 10px 0 5px;
   font-size: 28px;
+  color: #0f172a;
 }
 
-/* Dòng title */
-.title {
-  margin: 0;
+.app.dark .profile-card h1 {
+  color: #f8fafc;
+}
+
+.profile-title {
+  margin: 0 0 18px;
   color: #64748b;
+  font-size: 16px;
   font-weight: bold;
 }
 
-.dark .title {
+.app.dark .profile-title {
   color: #cbd5e1;
 }
 
-/* Text online/offline */
+/* Major + Hobbies */
+.info-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin: 12px 0;
+}
+
+.info-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #dbeafe;
+  color: #2563eb;
+
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+.info-row p {
+  margin: 0;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.info-row span {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.app.dark .info-row p {
+  color: #e5e7eb;
+}
+
+.app.dark .info-icon {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+.app.dark .info-row span {
+  color: #38bdf8;
+}
+
+/* Hobby items */
+.hobby-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 10px 0 20px;
+}
+
+.hobby-item {
+  padding: 7px 14px;
+  border-radius: 999px;
+
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app.dark .hobby-item {
+  background-color: #1e293b;
+  color: #93c5fd;
+  border-color: #334155;
+}
+
+/* Status */
 .status {
   width: fit-content;
-  margin: 15px auto;
+  margin: 18px auto;
   padding: 8px 20px;
 
   border-radius: 999px;
   font-weight: bold;
 }
 
-.online-text {
+.status.online {
   background-color: #dcfce7;
   color: #15803d;
 }
 
-.offline-text {
+.status.offline {
   background-color: #fee2e2;
   color: #b91c1c;
 }
 
-/* Khu thông tin */
-.info-section {
-  margin-top: 20px;
+/* Like box */
+.like-box {
+  margin: 22px 0;
+  padding: 18px;
+
+  border-radius: 18px;
+  background-color: #eff6ff;
 }
 
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 15px;
-
-  padding: 14px 16px;
-  margin-bottom: 12px;
-
-  border-radius: 16px;
-  background-color: #f1f5f9;
-}
-
-.dark .info-row {
+.app.dark .like-box {
   background-color: #1e293b;
 }
 
-.info-row span {
+.like-box p {
+  margin: 0;
   color: #64748b;
   font-weight: bold;
 }
 
-.dark .info-row span {
+.app.dark .like-box p {
   color: #cbd5e1;
 }
 
-.info-row strong {
-  text-align: right;
-}
-
-/* Hobbies */
-.hobby-section {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.hobby-section h2 {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-
-.hobby-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.hobby-item {
-  padding: 8px 13px;
-
-  border-radius: 999px;
-  background-color: #dbeafe;
-  color: #1d4ed8;
-
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.dark .hobby-item {
-  background-color: #312e81;
-  color: #e0e7ff;
-}
-
-/* Like card */
-.like-card {
-  margin: 22px 0;
-  padding: 18px;
-
-  border-radius: 20px;
-  background: linear-gradient(135deg, #9333ea);
-
-  color: white;
-}
-
-.like-card p {
-  margin: 0;
-  font-weight: bold;
-}
-
-.like-card h2 {
+.like-box h2 {
   margin: 6px 0 0;
+  color: #2563eb;
   font-size: 36px;
 }
 
-/* Nhóm nút */
+.app.dark .like-box h2 {
+  color: #38bdf8;
+}
+
+/* Buttons */
 .button-group {
   display: flex;
   gap: 12px;
 }
 
-.button-group button {
-  flex: 1;
-
-  padding: 13px;
+.btn {
+  padding: 11px 16px;
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
 
+  background-color: #2563eb;
   color: white;
+
   font-weight: bold;
   cursor: pointer;
 
   transition: 0.2s;
 }
 
-.button-group button:hover {
-  transform: translateY(-3px);
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #1d4ed8;
 }
 
-.like-btn {
-  background-color: #8400ff;
+.button-group .btn {
+  flex: 1;
 }
 
-.online-btn {
-  background-color: #16a34a;
-}
-
-/* Responsive cho màn hình nhỏ */
+/* Mobile */
 @media (max-width: 450px) {
   .profile-card {
     width: 100%;
@@ -288,28 +289,4 @@ h1 {
   .button-group {
     flex-direction: column;
   }
-
-  .info-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .info-row strong {
-    text-align: left;
-  }
-}
-.light h1 {
-  color: #0f172a;
-}
-
-.light .hobby-section h2 {
-  color: #0f172a;
-}
-
-.dark h1 {
-  color: white;
-}
-
-.dark .hobby-section h2 {
-  color: white;
 }
