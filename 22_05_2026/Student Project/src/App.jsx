@@ -1,4 +1,9 @@
 import { useState } from "react";
+/**
+ * useState() là hàm của React dùng để tạo state.
+ *
+ * State là dữ liệu mà khi thay đổi thì giao diện sẽ tự cập nhật.
+ */
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
 import avatarImg from "./assets/images/avatar.png";
@@ -8,6 +13,8 @@ function App(){
   const [isOnline, setIsOnline] = useState(true);
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+
 
   const handleLike = () => {
     setTotalLike(totalLike + 1);
@@ -21,6 +28,8 @@ function App(){
     setIsDarkMode(!isDarkMode);
   };
   
+
+
   return (
     <div className={`app ${isDarkMode ? "dark" : "light"}`}>
       <ProfileCard
@@ -35,6 +44,8 @@ function App(){
         onLike={handleLike}
         onToggleStatus={handleToggleStatus}
         onToggleTheme={handleToggleTheme}
+  
+
       />
     </div>
 

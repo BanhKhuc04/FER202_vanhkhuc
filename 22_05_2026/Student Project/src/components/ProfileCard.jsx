@@ -55,6 +55,7 @@ function ProfileCard(props) {
         <button className="btn" onClick={props.onToggleStatus}>
           {props.isOnline ? "Go Offline" : "Go Online"}
         </button>
+
       </div>
     </div>
   );
