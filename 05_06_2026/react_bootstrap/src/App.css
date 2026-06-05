@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+.navbar {
+  height: 60px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbar h2 {
+  font-size: 22px;
+  margin-right: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar li {
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  margin-left: 30px;
+}
+
+.search-box input {
+  padding: 8px;
+  background-color: #222;
+  border: 1px solid #555;
+  color: white;
+}
+
+.search-box button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 320px;
+  background-image: url("https://images.unsplash.com/photo-1513104890138-7c749659a591");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.menu {
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.menu h2,
+.booking h2 {
+  font-size: 38px;
+  margin-bottom: 45px;
+}
+
+.pizza-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.pizza-card {
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-box {
+  position: relative;
+  height: 210px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffd60a;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.pizza-info {
+  padding: 18px;
+  text-align: left;
+}
+
+.pizza-info h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.price {
+  color: #ffc300;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pizza-info button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  background-color: #1f2630;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booking {
+  padding: 60px 15px 80px;
+  text-align: center;
+}
+
+form {
+  max-width: 850px;
+  margin: auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #2b2b2b;
+  border: 1px solid #666;
+  color: white;
+  border-radius: 4px;
+}
+
+.message-label {
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.send-btn {
+  margin-top: 18px;
+  background-color: #ffd60a;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .pizza-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .pizza-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 30px;
+  }
+}
