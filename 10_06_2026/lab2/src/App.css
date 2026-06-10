@@ -1,0 +1,49 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.carousel-caption h2 {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 60px;
+}
