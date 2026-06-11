@@ -18,14 +18,14 @@ const products = [
     name: 'Denim Jacket',
     price: '700,000 VND',
     status: 'Available',
-    image: 'https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/23fb1a8b-d751-426b-afa2-a91dc4ba5575/AS+M+NK+DF+BREATHE+MILER+SS+TO.png',
+    image: 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/031a82eb-6b79-440c-a80b-eec0ffc96655/AS+M+NK+DFADV+STRIDE+SS+TOP.png',
   },
   {
     id: 4,
     name: 'Basic T-Shirt',
     price: '250,000 VND',
     status: 'Available',
-    image: 'https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b59c09a1-b93b-4c71-9929-601376da4b4e/AS+M+NK+DFADV+STRIDE+NVLTY+SS.png',
+    image: 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/035ac3c0-8bb9-4b28-9028-c641aef30e0d/AS+M+NK+DFADV+AROSWFT+SINGLET.png',
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const products = [
     name: 'Sneakers',
     price: '900,000 VND',
     status: 'Available',
-    image: 'https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/3b5c5969-6012-473f-88e9-0c3c3b993e11/AS+W+NK+ARSWFT+DFADV+CROP+TANK.png',
+    image: 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/3b5c5969-6012-473f-88e9-0c3c3b993e11/AS+W+NK+ARSWFT+DFADV+CROP+TANK.png',
   },
 ];
 

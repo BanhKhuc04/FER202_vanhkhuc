@@ -2,25 +2,17 @@ import { Container, Row, Col } from 'react-bootstrap';
 import products from '../data/products';
 import ProductCard from './ProductCard';
 
-function ProductList({ onAddToCart, cartItems }) {
+function ProductList({ onAddToCart }) {
   return (
-    <Container className="my-5">
-      <h2 className="text-center fw-bold mb-4">Our Products</h2>
+    <Container fluid className="my-5 product-section px-5">
+      <h2 className="text-center product-title">Our Products</h2>
 
-      <Row>
-        {products.map((product) => {
-          const isAdded = cartItems.some((item) => item.id === product.id);
-
-          return (
-            <Col key={product.id} md={4} sm={6} xs={12} className="mb-4">
-              <ProductCard
-                product={product}
-                onAddToCart={onAddToCart}
-                isAdded={isAdded}
-              />
-            </Col>
-          );
-        })}
+      <Row className="g-4">
+        {products.map((product) => (
+          <Col key={product.id} lg={4} md={6} sm={12}>
+            <ProductCard product={product} onAddToCart={onAddToCart} />
+          </Col>
+        ))}
       </Row>
     </Container>
   );

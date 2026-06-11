@@ -6,9 +6,9 @@ function Banner() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80"
+          src="https://img3.thuthuatphanmem.vn/uploads/2019/10/14/anh-lookbook-thoi-trang_113854100.jpg"
           alt="Fashion Collection"
-          style={{ height: '500px', objectFit: 'cover' }}
+          style={{ height: '700px', objectFit: 'cover' }}
         />
         <Carousel.Caption>
           <h2>FASHION COLLECTION 2026</h2>
@@ -19,9 +19,9 @@ function Banner() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1600&q=80"
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRpgs-VxiqZWypWO1Sz8yLpNGaPgy3K24qlXwF4uA9NimVxNLjJldl15jBQ7EkThFUzHldi0AW1RPB-lomZV5_aKVcj53O5vAWl2-et28p4DuTxfEDHusFj7HvMGQ7cBnEuvJr8EUtKFCoSZAzvi65WOJgusPyeGpE6CVK8cPxQlzDeOi90GjKQOecfA/s3456/4x2%20banner%20design1.jpg"
           alt="Summer Sale"
-          style={{ height: '500px', objectFit: 'cover' }}
+          style={{ height: '700px', objectFit: 'cover' }}
         />
         <Carousel.Caption>
           <h2>SUMMER SALE UP TO 50%</h2>
@@ -32,9 +32,13 @@ function Banner() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80"
+          src="https://media.fmplus.com.vn/uploads/news/1ca3baa2-b00e-4cd1-9412-fafeff117718.jpg"
           alt="New Arrivals"
-          style={{ height: '500px', objectFit: 'cover' }}
+          style={{
+            height: '700px',
+            objectFit: 'cover',
+            objectPosition: 'top',
+          }}
         />
         <Carousel.Caption>
           <h2>NEW ARRIVALS</h2>

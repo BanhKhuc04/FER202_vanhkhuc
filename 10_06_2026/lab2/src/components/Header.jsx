@@ -58,7 +58,10 @@ function Header({ cartCount, cartItems, onRemoveFromCart }) {
             <p>Your cart is empty.</p>
           ) : (
             cartItems.map((item) => (
-              <div key={item.id} className="d-flex align-items-center mb-3 border-bottom pb-3">
+              <div
+                key={item.id}
+                className="d-flex align-items-center mb-3 border-bottom pb-3"
+              >
                 <img
                   src={item.image}
                   alt={item.name}
@@ -74,6 +77,7 @@ function Header({ cartCount, cartItems, onRemoveFromCart }) {
                 <div className="flex-grow-1">
                   <h6 className="mb-1">{item.name}</h6>
                   <p className="mb-1 text-danger fw-bold">{item.price}</p>
+                  <p className="mb-0">Quantity: {item.quantity}</p>
                 </div>
 
                 <Button

@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react';
 import Header from './components/Header';
 import Banner from './components/Banner';
@@ -8,10 +9,18 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (product) => {
-    const exists = cartItems.find((item) => item.id === product.id);
+    const existingItem = cartItems.find((item) => item.id === product.id);
 
-    if (!exists) {
-      setCartItems([...cartItems, product]);
+    if (existingItem) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
   };
 
@@ -19,21 +28,17 @@ function App() {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <>
       <Header
+        cartCount={cartCount}
         cartItems={cartItems}
-        cartCount={cartItems.length}
         onRemoveFromCart={handleRemoveFromCart}
       />
-
       <Banner />
-
-      <ProductList
-        cartItems={cartItems}
-        onAddToCart={handleAddToCart}
-      />
-
+      <ProductList onAddToCart={handleAddToCart} />
       <Footer />
     </>
   );

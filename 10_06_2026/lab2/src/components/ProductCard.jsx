@@ -1,17 +1,29 @@
+import { useState } from 'react';
 import { Card, Button, Badge } from 'react-bootstrap';
 
-function ProductCard({ product, onAddToCart, isAdded }) {
+function ProductCard({ product, onAddToCart }) {
+  const [added, setAdded] = useState(false);
+
+  const handleClick = () => {
+    onAddToCart(product);
+    setAdded(true);
+
+    setTimeout(() => {
+      setAdded(false);
+    }, 2000);
+  };
+
   return (
     <Card className="h-100 shadow-sm">
-        <Card.Img
+      <Card.Img
         variant="top"
         src={product.image}
         style={{
-            width: '100%',
-            aspectRatio: '1 / 1',
-            objectFit: 'cover',
+          width: '100%',
+          aspectRatio: '1 / 1',
+          objectFit: 'cover',
         }}
-        />
+      />
 
       <Card.Body className="d-flex flex-column">
         <Card.Title>{product.name}</Card.Title>
@@ -25,12 +37,11 @@ function ProductCard({ product, onAddToCart, isAdded }) {
         </Badge>
 
         <Button
-          variant={isAdded ? 'success' : 'dark'}
+          variant={added ? 'secondary' : 'success'}
           className="mt-auto"
-          onClick={() => onAddToCart(product)}
-          disabled={isAdded}
+          onClick={handleClick}
         >
-          {isAdded ? 'Added to Cart' : 'Add to Cart'}
+          {added ? '✓ Added to Cart' : 'Add to Cart'}
         </Button>
       </Card.Body>
     </Card>
