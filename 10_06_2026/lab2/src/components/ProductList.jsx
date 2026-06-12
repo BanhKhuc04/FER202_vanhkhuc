@@ -4,13 +4,16 @@ import ProductCard from './ProductCard';
 
 function ProductList({ onAddToCart }) {
   return (
-    <Container fluid className="my-5 product-section px-5">
-      <h2 className="text-center product-title">Our Products</h2>
+    <Container fluid className="product-section">
+      <h2 className="text-center mb-5">Our Products</h2>
 
-      <Row className="g-4">
+      <Row className="g-4 justify-content-center">
         {products.map((product) => (
-          <Col key={product.id} lg={4} md={6} sm={12}>
-            <ProductCard product={product} onAddToCart={onAddToCart} />
+          <Col xs={12} sm={6} lg={4} key={product.id}>
+            <ProductCard
+              product={product}
+              onAddToCart={onAddToCart}
+            />
           </Col>
         ))}
       </Row>

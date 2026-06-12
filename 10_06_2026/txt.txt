@@ -1,0 +1,59 @@
+
+ở app/jssx
+function App() {
+  const [cartCount, setCartCount] = useState(0);
+
+  // Khi bấm Add thì cart tăng 1
+  function handleAddToCart() {
+    setCartCount(cartCount + 1);
+  }
+
+  // Reset cart về 0
+  function handleResetCart() {
+    setCartCount(0);
+  }
+
+  return (
+    <>
+      <Header
+        cartCount={cartCount}
+        onResetCart={handleResetCart}
+      />
+
+      <Banner />
+
+      <ProductList onAddToCart={handleAddToCart} />
+
+      <Footer />
+    </>
+  );
+}
+
+thêm nút resetcard
+
+
+function handleAddToCart() {
+  // Nếu cartCount đã bằng hoặc lớn hơn 10 thì không tăng nữa
+  if (cartCount >= 10) {
+    alert('Cart cannot have more than 10 items.');
+    return;
+  }
+
+  setCartCount(cartCount + 1);
+}
+
+ko vượt quá giới hạn
+
+
+
+bấm contact thì nhảy xuốc footer
+<Nav.Link href="#contact">Contact</Nav.Link>
+<footer id="contact">
+  ...
+</footer>
+
+rating: 4.5
+<Card.Text className="text-warning">
+  {/* Hiển thị rating sản phẩm */}
+  ⭐ {product.rating}
+</Card.Text>

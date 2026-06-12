@@ -1,54 +1,56 @@
-import { useState } from "react";
-/**
- * useState() là hàm của React dùng để tạo state.
- *
- * State là dữ liệu mà khi thay đổi thì giao diện sẽ tự cập nhật.
- */
+import { Component } from "react";
 import "./App.css";
 import ProfileCard from "./components/ProfileCard";
 import avatarImg from "./assets/images/avatar.png";
-function App(){
-  const [totalLike, setTotalLike] = useState(0);
 
-  const [isOnline, setIsOnline] = useState(true);
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+    this.state = {
+      totalLike: 0,
+      isOnline: true,
+      isDarkMode: false,
+    };
+  }
 
-
-
-  const handleLike = () => {
-    setTotalLike(totalLike + 1);
+  handleLike = () => {
+    this.setState({
+      totalLike: this.state.totalLike + 1,
+    });
   };
 
-  const handleToggleStatus = () => {
-    setIsOnline(!isOnline);
+  handleToggleStatus = () => {
+    this.setState({
+      isOnline: !this.state.isOnline,
+    });
   };
 
-  const handleToggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+  handleToggleTheme = () => {
+    this.setState({
+      isDarkMode: !this.state.isDarkMode,
+    });
   };
-  
 
-
-  return (
-    <div className={`app ${isDarkMode ? "dark" : "light"}`}>
-      <ProfileCard
-        fullName="Khúc Việt Anh"
-        title="Student Profile Card"
-        major="Software Engineering"
-        avatar={avatarImg}
-        hobbies={["Coding", "Music", "Football"]}
-        totalLike={totalLike}
-        isOnline={isOnline}
-        isDarkMode={isDarkMode}
-        onLike={handleLike}
-        onToggleStatus={handleToggleStatus}
-        onToggleTheme={handleToggleTheme}
-  
-
-      />
-    </div>
-
-  );
+  render() {
+    return (
+      <div className={`app ${this.state.isDarkMode ? "dark" : "light"}`}>
+        <ProfileCard
+          fullName="Khúc Việt Anh"
+          title="Student Profile Card"
+          major="Software Engineering"
+          avatar={avatarImg}
+          hobbies={["Coding", "Music", "Football"]}
+          totalLike={this.state.totalLike}
+          isOnline={this.state.isOnline}
+          isDarkMode={this.state.isDarkMode}
+          onLike={this.handleLike}
+          onToggleStatus={this.handleToggleStatus}
+          onToggleTheme={this.handleToggleTheme}
+        />
+      </div>
+    );
+  }
 }
+
 export default App;

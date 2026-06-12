@@ -24,7 +24,7 @@ const products = [
     id: 4,
     name: 'Basic T-Shirt',
     price: '250,000 VND',
-    status: 'Available',
+    status: 'Not Available',
     image: 'https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/035ac3c0-8bb9-4b28-9028-c641aef30e0d/AS+M+NK+DFADV+AROSWFT+SINGLET.png',
   },
   {
