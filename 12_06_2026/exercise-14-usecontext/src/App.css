@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f9f9f9; }
+.app { max-width: 900px; margin: 0 auto; }
+h1 { color: #333; border-bottom: 2px solid #61dafb; padding-bottom: 10px; }
+.section { background: white; border-radius: 10px; padding: 20px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+h2 { color: #555; margin-top: 0; }
+.dishes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.dish-card { border: 1px solid #eee; border-radius: 8px; padding: 14px; position: relative; }
+.dish-card h3 { margin: 0 0 4px; }
+.price { font-weight: bold; color: #e67e22; margin: 4px 0; }
+.desc { font-size: 13px; color: #666; margin: 6px 0; }
+.label { background: #e74c3c; color: white; font-size: 11px; padding: 2px 6px; border-radius: 4px; position: absolute; top: 10px; right: 10px; }
+button { background: #61dafb; border: none; padding: 6px 14px; border-radius: 6px; cursor: pointer; margin: 4px; font-size: 13px; }
+button:hover { background: #21a1c4; color: white; }
+ul { padding-left: 16px; }
+li { margin: 6px 0; }
