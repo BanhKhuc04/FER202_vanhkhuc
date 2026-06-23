@@ -11,7 +11,7 @@ import StudentForm from './components/StudentForm'
 import StudentTable from './components/StudentTable'
 import ThemeToggle from './components/ThemeToggle'
 import { initialStudents } from './data/initialStudents.js'
-import { ALL_MAJORS, MAJOR_OPTIONS } from './data/majors'
+import { ALL_MAJORS, MAJOR_OPTIONS } from './data/majors.js'
 import {
   STUDENT_ACTIONS,
   studentReducer,
