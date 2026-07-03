@@ -1,18 +1,18 @@
 export const initialStudents = [
   {
-    id: 184938943,
+    id: 1,
     name: 'Nguyen Van A',
     age: 20,
     major: 'Information Technology',
   },
   {
-    id: 184938944,
+    id: 2,
     name: 'Tran Thi B',
     age: 21,
     major: 'Business Administration',
   },
   {
-    id: 184938945,
+    id: 3,
     name: 'Le Van C',
     age: 22,
     major: 'Software Engineering',

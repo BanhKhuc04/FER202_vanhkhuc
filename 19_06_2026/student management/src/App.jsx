@@ -111,6 +111,7 @@ export default function App() {
             major,
           },
         })
+        //update
       } else {
         dispatch({
           type: STUDENT_ACTIONS.ADD_STUDENT,
@@ -122,8 +123,13 @@ export default function App() {
           },
         })
       }
-
-      clearInputFields()
+      
+      if (confirm('Do you want to add another student?')) {
+        alert('Student add successfully')
+      } else {
+        alert('Student not added successfully')
+        clearInputFields()
+      }
     },
     [
       studentName,
@@ -149,7 +155,7 @@ export default function App() {
         type: STUDENT_ACTIONS.DELETE_STUDENT,
         payload: studentId,
       })
-
+      //
       if (studentId === editingStudentId) {
         clearInputFields()
       }

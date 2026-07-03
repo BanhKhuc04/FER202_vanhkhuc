@@ -153,6 +153,7 @@
   }
 }
 
+
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
@@ -160,7 +161,11 @@
     height: 48px;
   }
 }
-
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .ticks {
   position: relative;
   width: 100%;

@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "Updated Title",
+      "author": "Updated Author",
+      "id": "0a1f"
+    },
+    {
+      "title": "News",
+      "author": "Tran Anh",
+      "id": "1MF8xoo3Fgo"
+    },
+    {
+      "title": "vanhkhuc",
+      "author": "23",
+      "id": "l-aaa7qzX3M"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "Loan",
+      "password": "123",
+      "details": "Loan Do"
+    },
+    {
+      "id": "2",
+      "username": "Minh",
+      "password": "456",
+      "details": "Minh Nguyen"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

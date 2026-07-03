@@ -1,0 +1,13 @@
+      } else {
+        const manualId = prompt('Vui lòng nhập ID cho sinh viên mới:');
+        if (!manualId) return;
+        dispatch({
+          type: STUDENT_ACTIONS.ADD_STUDENT,
+          payload: {
+            id: manualId,//generateStudentId(students)
+            name,
+            age,
+            major,
+          },
+        })
+      }
